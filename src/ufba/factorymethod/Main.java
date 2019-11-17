@@ -6,8 +6,6 @@ import ufba.elementos.Corpo;
 import ufba.elementos.Rodape;
 
 public class Main {
-    public Main() {
-    }
 
     public static void main(String[] Args) {
     	
