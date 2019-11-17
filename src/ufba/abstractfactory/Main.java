@@ -7,15 +7,26 @@ import ufba.elementos.Rodape;
 
 public class Main {
     public static void main(String[] Args) {
-        FabricaDocumentacao fabrica = new FabricaHTML();
-        CriadorDocumentacao criador = new CriadorDocumentacao(fabrica);
+        FabricaDocumentacao fabricaHTML = new FabricaHTML();
+        CriadorDocumentacao criador = new CriadorDocumentacao(fabricaHTML);
+        
         Cabecalho cabecalho = criador.geraCabecalho();
         Corpo corpo = criador.geraCorpo();
         Rodape rodape = criador.geraRodape();
-        cabecalho.setTitulo("Padroes de projeto");
-        cabecalho.setEmpresa("Universidade Federal da Bahia");
-        corpo.setTexto("Aula de padroes de projeto na disciplina Engenharia de Software I.");
-        rodape.setData(new Date());
-        System.out.println(cabecalho.getOutput() + corpo.getOutput() + rodape.getOutput());
+        System.out.println(cabecalho.getOutput());
+        System.out.println(corpo.getOutput());
+        System.out.println(rodape.getOutput());
+        
+        FabricaDocumentacao fabricaMARKDOWN = new FabricaMARKDOWN();
+        criador.setFabrica(fabricaMARKDOWN);
+        
+        cabecalho = criador.geraCabecalho();
+        corpo = criador.geraCorpo();
+        rodape = criador.geraRodape();
+        System.out.println(cabecalho.getOutput());
+        System.out.println(corpo.getOutput());
+        System.out.println(rodape.getOutput());
+        
+        
     }
 }
