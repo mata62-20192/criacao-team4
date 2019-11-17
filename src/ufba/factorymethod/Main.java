@@ -21,7 +21,9 @@ public class Main {
         cabecalhoHTML.setEmpresa("Universidade Federal da Bahia");
         corpoHTML.setTexto("Aula de padroes de projeto na disciplina Engenharia de Software I.");
         rodapeHTML.setData(new Date());
-        System.out.println(cabecalhoHTML.getOutput() + corpoHTML.getOutput() + rodapeHTML.getOutput());
+        System.out.println(cabecalhoHTML.getOutput());
+        System.out.println(corpoHTML.getOutput());
+        System.out.println(rodapeHTML.getOutput());
     	
     	criador = new CriadorMARKDOWN();
 
@@ -33,7 +35,9 @@ public class Main {
         cabecalhoMARKDOWN.setEmpresa("Universidade Federal da Bahia");
         corpoMARKDOWN.setTexto("Aula de padroes de projeto na disciplina Engenharia de Software I.");
         rodapeMARKDOWN.setData(new Date());
-        System.out.println(cabecalhoMARKDOWN.getOutput() + corpoMARKDOWN.getOutput() + rodapeMARKDOWN.getOutput());
+        System.out.println(cabecalhoMARKDOWN.getOutput());
+        System.out.println(corpoMARKDOWN.getOutput());
+        System.out.println(rodapeMARKDOWN.getOutput());
 
 
     }
